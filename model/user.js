@@ -1,11 +1,13 @@
 var mongoose=require("mongoose");
 var schema= mongoose.Schema;
-var empschema=new schema({
-    Eid:String,
-    Name:String,
-    Salary:Number
-})
+var userschema=new schema({
 
-var empmodel=mongoose.model("employee", empschema);
+    name:String,
+    username:String,
+    password:String,
+    admin: Boolean
+});
 
-module.exports=empmodel;
+var usermodel=mongoose.model("user", userschema);
+
+module.exports=usermodel;

@@ -36,7 +36,7 @@
 <body>
   <div class="card p-3">
     <h3 class="text-center mb-3">Registration Form</h3>
-    <form action="/newUser" method="POST">
+    <form action="/register/newUser" method="POST">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control" id="name" name="name" <%if(name){%> value="<%=name%>" <%}%>  placeholder="Enter your name" required>
@@ -51,6 +51,18 @@
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Enter a password" required>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="admin" id="flexRadioDefault1" onclick="document.getElementById('flexRadioDefault1').value= true">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Admin
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="admin" id="flexRadioDefault2" onclick="document.getElementById('flexRadioDefault2').value= false" value="false" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          User
+        </label>
       </div>
       <div class="text-center">
         <button type="submit" class="btn btn-primary">Sign up</button>
